@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="teams"
+            type="com.mustafaguvenc.soccerleauge.model.TeamModel" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@{String.valueOf(teams.uuid)}"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/custom_border" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:text="@{String.valueOf(teams.team)}"
+            android:gravity="center|left"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/custom_border"/>
+
+    </LinearLayout>
+
+</layout>

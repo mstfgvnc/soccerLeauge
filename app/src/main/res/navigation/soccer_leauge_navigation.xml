@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/soccer_leauge_navigation"
+    app:startDestination="@id/teamList">
+
+    <fragment
+        android:id="@+id/fixture"
+        android:name="com.mustafaguvenc.soccerleauge.ui.fixture.Fixture"
+        android:label="fragment_fixture"
+        tools:layout="@layout/fragment_fixture" >
+        <action
+            android:id="@+id/action_fixture_to_teamList"
+            app:destination="@id/teamList" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamList"
+        android:name="com.mustafaguvenc.soccerleauge.ui.teamlist.TeamList"
+        android:label="fragment_team_list"
+        tools:layout="@layout/fragment_team_list" >
+        <action
+            android:id="@+id/action_teamList_to_fixture"
+            app:destination="@id/fixture"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>
